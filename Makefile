@@ -4,12 +4,12 @@ RM := rm -rf
 INCLUDE := -I includes/
 MAKEFLAGS := --no-print-directory
 
-HEADERS := $(addprefix includes/,common.h chunk.h memory.h debug.h value.h)
+HEADERS := $(addprefix includes/,common.h chunk.h memory.h debug.h value.h vm.h)
 SRC_DIR := src/
 
 NAME := clox
 
-SRCS := $(addprefix $(SRC_DIR),chunk.c memory.c debug.c value.c)
+SRCS := $(addprefix $(SRC_DIR),chunk.c memory.c debug.c value.c vm.c)
 
 ALL_SRCS := main.c $(SRCS)
 OBJS := $(ALL_SRCS:%.c=%.o)
